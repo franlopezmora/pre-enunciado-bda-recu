@@ -24,6 +24,7 @@ public class Invoice {
     @JoinColumn(name="CUSTOMER_ID", nullable = false)
     private Customer customerId;
 
+    @Temporal(TemporalType.DATE)
     @Column(name="INVOICE_DATE", nullable = false)
     private Date invoiceDate;
 
