@@ -21,7 +21,7 @@ public class Track {
     private Integer trackId;
 
     @ManyToOne(optional = true, fetch = FetchType.EAGER)
-    @JoinColumn(name="ALBUM_ID", nullable = false)
+    @JoinColumn(name="ALBUM_ID", nullable = true)
     private Album album;
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name="MEDIA_TYPE_ID", nullable = false)

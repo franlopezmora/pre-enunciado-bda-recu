@@ -20,7 +20,7 @@ public class Customer {
     @Column(name="CUSTOMER_ID")
     private Integer customerId;
     @ManyToOne(optional = true, fetch = FetchType.EAGER)
-    @JoinColumn(name = "SUPPORT_REP_ID", nullable = false)
+    @JoinColumn(name = "SUPPORT_REP_ID", nullable = true)
     private Employee supportRepId;
     @Column(name="FIRST_NAME", length = 40, nullable = false)
     private String firstName;

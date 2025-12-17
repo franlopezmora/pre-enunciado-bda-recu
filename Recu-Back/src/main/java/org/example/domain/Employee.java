@@ -32,8 +32,8 @@ public class Employee {
     private String title;
 
     // Empleado al que reporta (puede ser null)
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "REPORTS_TO") // <-- nombre real de la FK
+    @ManyToOne(optional = true, fetch = FetchType.EAGER)
+    @JoinColumn(name = "REPORTS_TO", nullable = true)
     private Employee reportsTo;  // Autorreferencia
 
     @Temporal(TemporalType.DATE)
